@@ -63,18 +63,22 @@ $mobile_main_links_fs: 0.96em;
 			left: 0;
 			top: 0;
 			z-index: 2;
-			background: $mobile_list_items_color;
+			//background: $mobile_list_items_color;
 			height: 100%;
 			width: 100%;
 		}
 	}
 
-	a {
+	a,.mobile_search_btn {
 		position: relative;
 		z-index: 5;
 		padding: 1em;
 		background: white;
 		display: block;
+	}
+
+	.mobile_search_btn {
+		cursor: pointer;
 	}
 
 	.mobile_nav_block.active {

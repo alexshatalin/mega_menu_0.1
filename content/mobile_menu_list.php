@@ -1,7 +1,7 @@
 <div class="list_items_content">
 	<div class="mobile_nav_block active">
 		<ul>
-
+			<li data-id="search" class="mobile_search_btn">search<div class="secondary_link_button search"><span></span></div></li>
 			<li><a href="https://www.crowdstrike.com/solutions/">CROWDSTRIKE SOLUTIONS</a><div data-id="m-page-crowdstrike-solutions" class="secondary_link_button next"><span></span></div></li>
 			<li><a href="/products">products</a><div data-id="m-page-crowdstrike-products" class="secondary_link_button next"><span></span></div></li>
 			<li><a href="/services">services</a><div data-id="m-page-crowdstrike-services" class="secondary_link_button next"><span></span></div></li>

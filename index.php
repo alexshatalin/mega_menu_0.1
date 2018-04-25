@@ -276,9 +276,7 @@
 		<div class="cs_page_content">
 			<div class="mobile_nav_section">
     			<div class="mobile_nav_content">
-    				<div data-id="search" class="search_btn"><span class="fa-search"></span></div>
 					<?php require('content/mobile_menu_list.php');?>
-
     			</div>
     		</div>
     		<div class="cs_main_section">
