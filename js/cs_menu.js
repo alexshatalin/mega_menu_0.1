@@ -11,13 +11,20 @@
 		csMenuObj.mobileHeaderHeight = Math.round($('.menu_header').outerHeight());
 		csMenuObj.mobileMainMenuHeight = Math.round($('.mobile_nav_content').height() + csMenuObj.mobileHeaderHeight);
 		csMenuObj.menuOpen = false;
+		csMenuObj.searchModalOpened = false;
 		csMenuObj.pageContainer = $('.cs_page_container');
 
 		$('body').on('click', '[data-id="search"]', function(){
-			$('.search_modal').toggleClass('opened');
-			csMenuObj.pageContainer.toggleClass('blur').removeAttr('style');
-			csMenuObj.resetMobileMenu();
-			$('.mobile_menu_btn').toggleClass('reset_opacity');
+			if( false == csMenuObj.searchModalOpened ) {
+				$('.search_modal').addClass('opened');
+				csMenuObj.pageContainer.addClass('blur').removeAttr('style');
+				csMenuObj.resetMobileMenu();
+				$('.mobile_menu_btn').addClass('reset_opacity');
+				csMenuObj.searchModalOpened = true;
+			} else {
+				csMenuObj.closeSearchResults();
+			}
+			
 
 		}).on('click', '#csMobileMenuBtn', function(){
 			if( false == csMenuObj.menuOpen ) {
@@ -70,12 +77,20 @@
 			csMenuObj.resetMobileMenu();
 		}
 
-		if( csMenuObj.searchModalState != 1 ) {
-			$('[data-id="search"]').click();
-			csMenuObj.searchModalState = 1;
-		}
+		// Need to rework search removal
+		// if( true == csMenuObj.searchModalOpened && csMenuObj.searchModalState != 1 ) {
+		// 	csMenuObj.closeSearchResults();
+		// 	//csMenuObj.searchModalState = 1;
+		// }
 		
 	});
+
+	csMenuObj.closeSearchResults = function(){
+		$('.search_modal').removeClass('opened');
+		csMenuObj.pageContainer.removeClass('blur').removeAttr('style');
+		$('.mobile_menu_btn').removeClass('reset_opacity');
+		csMenuObj.searchModalOpened = false;
+	}
 
 	csMenuObj.closeDesktopMenu = function(){
 		$('.mega_menu').removeClass('__opened');
