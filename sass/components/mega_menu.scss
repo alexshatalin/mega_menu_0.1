@@ -1,0 +1,171 @@
+$featured_links_margin: 1.3em;
+
+.mega_menu {
+	
+	&__body {
+		position: absolute;
+		left: 0;
+		top: 100%;
+		z-index: 8;
+		padding: 11.8em 0;
+		background: $header_bottom_color;
+		width: 100%;
+		overflow: hidden;
+		@include transform(translateY(-100%));
+		@include transition(all .2s ease-out 0s);
+	}
+
+	&__content {
+		position: static;
+		float: right;
+	}
+
+	&__header {
+		position: static;
+
+		&:before {
+			@extend %block_pseudo_container;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 9;
+			background: white;
+			height: 100%;
+			width: 100%;
+			box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+		}
+	}
+
+	&__panel {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: -1;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		//@include transition(all .2s ease-out 0.2s);
+
+		&.active {
+			z-index: 9;
+			opacity: 1;
+			//@include transition(all 0s ease-out 0.2s);
+		}
+	}
+
+	&.__opened {
+		.mega_menu__body {
+			@include transform(translateY(0));
+		}
+	}
+
+	&__links {
+		position: relative;
+		z-index: 9;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			color: $header_bottom_li_color;
+			font-size: 0.8em;
+			font-weight: 900;
+			text-transform: uppercase;
+			@include transition(all .3s ease-out 0s);
+
+			&:hover {
+				color: $featured_red;
+
+				.fa {
+					color: $featured_red;
+				}
+			}
+		}
+
+		li:last-of-type {
+			background: $featured_red;
+			color: $header_bottom_color;
+			
+			&:hover {
+				background: $dark_red;
+			}
+
+			a {
+				//margin: 0;
+				padding: $featured_links_margin 2.1em;
+			}
+		}
+
+		a {
+			display: block;
+			padding: $featured_links_margin 0;
+			text-align: center;
+			
+		}
+
+		.fa {
+			margin: 0 1em;
+			color: $header_bottom_chevron_bg;
+			font-size: 0.8em;
+			vertical-align: middle;
+			line-height: 1.1;
+			pointer-events: none;
+		}
+	}
+
+	&__container {
+		margin: 0 -1em;
+		padding: 1.4em 0;
+		&:after {
+			@extend %fix_clear_container;
+		}
+	}
+
+	&__col {
+		padding: 0 1em;
+		width: 33.3%;
+		float: left;
+
+		dl {
+			margin: 0;
+			padding: 0;
+			list-style-type: none;
+			display: block;
+		}
+
+		dt {
+			margin: 0 0 1em;
+			padding: 0 0 0.3em;
+			border-bottom: 1px solid $desktop_menu_dt_border;
+			color: $desktop_menu_dt_color;
+			font-size: 0.9em;
+			text-transform: uppercase;
+		}
+
+		dd {
+			margin: 0 0 1em;
+			padding: 0;
+			color: $header_logo_hv_color;
+			font-size: 0.78em;
+			font-weight: 900;
+		}
+	}
+
+	&__view_all {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		z-index: 9;
+		padding: 1em 0;
+		background: $featured_red;
+		width: 100%;
+		text-align: center;
+
+		a {
+			color: white;
+			font-size: 1em;
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+	}
+
+}	

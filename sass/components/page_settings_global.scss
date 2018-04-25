@@ -1,0 +1,71 @@
+$menu_width: 12em;
+$header_height: 2em; //Specify header height if nessesary 
+
+.cs_page_container {
+	
+	//min-height: 100vh;
+	overflow: hidden;
+
+	img {
+		// Temporary properties
+		position: relative;
+		//top: -95px;
+		//display: none;
+		width: 100%;
+	}
+
+	.cs_page_content {
+		padding-top: 91px; //Temporary height;
+		z-index: 7;
+		@include transform(translateX(0));
+		@extend %initial_transition;
+	}
+
+	.cs_main_section {
+		opacity: 1;
+		@include transition(opacity .2s ease-out 0s);
+	}
+
+	&.blur {
+		.cs_main_section {
+			-webkit-filter: blur(7px);
+  			filter: blur(7px);
+  		}
+	}
+
+	&.open {
+		.mobile_menu_btn {
+			span {
+				background: none;
+				
+				&:before,&:after {
+					-webkit-transition-delay: 0s, 0.3s;
+          			transition-delay: 0s, 0.3s;
+				}
+				&:before {
+					top: 0;
+					@include transform(rotate(45deg));
+				}
+
+				&:after {
+					bottom: 0;
+					@include transform(rotate(-45deg));	
+				}
+				
+			}
+		}
+
+		.cs_page_content {
+			@include transform(translateX(-100%));
+		}
+
+		.cs_main_section {
+			opacity: 0;
+		}
+
+		.mobile_nav_section {
+			opacity: 1;
+		}
+	}
+
+}

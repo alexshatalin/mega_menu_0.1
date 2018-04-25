@@ -1,0 +1,104 @@
+%initial_transition {
+	@include transition(all .2s ease-out 0s);
+}
+
+%color_inherited {
+	color: inherit;
+}
+
+%horizontal_align_middle {
+	left: 50%;
+	@include transform(translateX(-50%));
+}
+
+%vertical_align_middle {
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+
+%centered_align {
+	left: 50%;
+	top: 50%;
+	@include transform(translateX(-50%) translateY(-50%));
+}
+
+%block_pseudo_container {
+	content: '';
+	display: block;
+}
+
+%fix_clear_container {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+%left {
+	float: left;
+}
+
+%right {
+	float: right;
+}
+
+%cp {
+	cursor: pointer;
+}
+
+%fix_webkit_flash_bug_part_one {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+%fix_webkit_flash_bug_part_two {
+	-webkit-user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-drag: none;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+
+%fix_webkit_flash_bug_part_three {
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+	//transform:scale(1);
+}
+
+%inline_block {
+	display: inline-block;
+	vertical-align: middle;
+}
+
+%hide {
+	display: none;
+}
+
+%show {
+	display: block;
+}
+
+%full_circle {
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+}

@@ -1,0 +1,36 @@
+/*
+Description: Menu Redesign
+Version: 1.00
+*/
+
+
+//sass --watch sass/main.scss:style.css --style compressed expanded
+// ruby /usr/local/bin/sass --load-path . --watch --style compressed main.scss:../style.css
+@import "base/functions_global";
+@import "base/fonts";
+@import "base/font_awesome";
+@import "base/typography";
+@import "base/colors";
+@import "helpers/mixins";
+@import "helpers/placeholders";
+@import "base/reset.scss";
+//@import "base/container_settings";
+
+
+@import "components/buttons";
+@import "components/moible_menu";
+@import "components/page_settings_global";
+@import "components/search_container";
+@import "components/mega_menu";
+
+
+
+@import "layout/header";
+
+@import "media/media_main";
+
+//@import "vendors/wordpress";
+
+
+
+

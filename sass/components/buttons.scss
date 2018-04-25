@@ -1,0 +1,103 @@
+.mobile_menu_btn {
+	position: absolute; 
+	right: 0.4em;
+	z-index: 9;
+	@extend %vertical_align_middle;
+	padding: 20px;
+	display: none;
+	@extend %cp;
+	
+	span {
+		display: block;
+	  	position: absolute;
+	  	top: 18px;
+	 	left: 5px;	
+	  	right: 5px;	
+	  	background: $featured_red;
+	  	height: 4px;
+	  	@include transition(all 0s ease-out 0.3s);
+
+	&:before,&:after {
+		@extend %block_pseudo_container;
+		position: absolute;
+		left: 0;
+		background: $featured_red;
+		height: 4px;
+		width: 100%;
+		-webkit-transition-duration: 0.3s, 0.3s;
+        transition-duration: 0.3s, 0.3s;
+ 		-webkit-transition-delay: 0.3s, 0s;
+        transition-delay: 0.3s, 0s;
+	}
+
+	&:before {
+		top: -10px;
+		-webkit-transition-property: top, -webkit-transform;
+        transition-property: top, transform;
+	}
+
+	&:after {
+		bottom: -10px;
+		-webkit-transition-property: bottom, -webkit-transform;
+        transition-property: bottom, transform;
+	}
+
+	}// End of span
+
+}
+
+.secondary_link_button {
+	position: absolute;
+	top: 0;
+	z-index: 9;
+	height: 100%;
+	width: 3.1635em;
+	@extend %cp;
+
+	span {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		z-index: 6;
+		@include transform(translateX(-50%) translateY(-50%));
+		@extend .fa;
+		color: white;
+		//pointer-events: none;
+	}
+
+	&:before {
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 4;
+		height: 100%;
+		width: 100%;
+		@extend %block_pseudo_container;
+	} 
+
+	&:before {
+		opacity: 1;
+		background: $mobile_list_items_color;
+	}
+
+	// &:after {
+	// 	z-index: 5;
+	// 	background: url('images/stripe.png') repeat;
+	// }
+
+&.prev {
+	left: 0;
+	pointer-events: none;
+	span {
+		@extend .fa-chevron-left;
+	}
+}
+
+&.next {
+	right: 0;
+	span {
+		@extend .fa-chevron-right;
+	}
+}
+
+}// End of secondary_link_button

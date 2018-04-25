@@ -1,0 +1,22 @@
+@media screen 
+and (max-width: 1024px) {
+
+.cs_page_container img,.mobile_menu_btn {
+	display: block;
+}
+
+.cs_page_container .cs_page_content,.mobile_nav_section {
+	padding-top: 45px;
+}
+
+.mega_menu {
+	&__links {
+		display: none;
+	}
+}
+
+.header_top_menu {
+	display: none;
+}
+
+}//End of 1024px

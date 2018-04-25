@@ -1,0 +1,10 @@
+// Changes px to em value
+@function em($px_val) {
+	@return #{$px_val/16}em;
+}
+
+@function rem($px_val) {
+	@return #{$px_val/16}rem;
+}
+
+// Set container width in container_settings.scss

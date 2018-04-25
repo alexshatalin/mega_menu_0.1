@@ -1,0 +1,360 @@
+@mixin margin($top: null, $right: null, $bottom: null, $left: null) {
+	margin: $top $right $bottom $left;
+}
+
+@mixin padding($top: null, $right: null, $bottom: null, $left: null) {
+	padding: $top $right $bottom $left;
+}
+
+// Create h tag
+@mixin h_tag($prop: null, $mar: null, $color: null, $font_size: null, $line_height: null, $letter_spacing: null, $text_trans: null, $text_align: null) {
+
+	#{$prop} {
+		@if $mar != false {
+			@include margin($mar);
+		} @else {
+			@include margin(0);
+		}
+		
+		@if $color != false {
+			color: $color; 
+		}
+		
+		@if $font_size != false {
+			font-size: $font_size; 
+		} 
+		
+		@if $line_height != false {
+			line-height: $line_height; 
+		}
+		
+		@if $letter_spacing != false {
+			letter-spacing: $letter_spacing; 
+		}
+		
+		@if $text_trans != false {
+			text-transform: $text_trans; 
+		}
+		
+		@if $text_align != false {
+			text-align: $text_align; 
+		}
+	}
+}
+
+// Create p tag
+@mixin p_tag($mar: null, $color: null, $font_size: null, $font_weight: null, $font_style: null, $line_height: null, $letter_spacing: null, $text_trans: null, $text_align: null) {
+	p {
+		@if $mar != false {
+			@include margin($mar);
+		} @else {
+			@include margin(0);
+		}
+		
+		@if $color != false {
+			color: $color; 
+		} 
+		
+		@if $font_size != false {
+			font-size: $font_size; 
+		}
+		
+		@if $font_weight != false {
+			font-weight: $font_weight; 
+		}
+		
+		@if $font_style != false {
+			font-style: $font_style; 
+		}
+		
+		@if $line_height != false {
+			line-height: $line_height; 
+		}
+		
+		@if $letter_spacing != false {
+			letter-spacing: $letter_spacing; 
+		}
+		
+		@if $text_trans != false {
+			text-transform: $text_trans; 
+		}
+		
+		@if $text_align != false {
+			text-align: $text_align; 
+		}
+	}
+}
+
+// Create accent line 
+@mixin create_accent_line($mar: null, $w: null, $h: null, $color: null) {
+	.accent_line {
+		@if $mar {
+			@include margin($mar);
+		} 
+		
+		@if $w {
+			width: $w;
+		} @else {
+			width: 1px;
+		}
+		
+		@if $h {
+			height: $h;
+		} @else {
+			height: 1px;
+		}
+		
+		@if $color {
+			background: $color;
+		} @else {
+			background: red;
+		}
+	}
+}
+
+//Create unstyled list 
+@mixin unstyled_list($ul_mar: null, $ul_pad: null, $li_pos: null, $li_mar: null, $li_pad: null, $li_color: null, $font_size: null, $font_weight: null, $text_trans: null, $display: null, $s_type: null) {
+
+	ul {
+		@if $ul_mar and $ul_pad {
+			@include margin($ul_mar);
+			@include padding($ul_pad);
+		} @else {
+			@include margin(0);
+			@include padding(0);
+		}
+		
+		@if $s_type != false {
+			list-style-type: $s_type;
+		} @else {
+			list-style-type: none;
+		}
+		
+		li {
+			@if $li_pos != false {
+				position: $li_pos;
+			}
+			
+			@if $li_mar or $li_pad {
+				@include margin($li_mar);
+				@include padding($li_pad);
+			} @else {
+				@include margin(0);
+				@include padding(0);
+			}
+			
+			@if $li_color != false {
+				color: $li_color;
+			} 
+			
+			@if $font_size != false {
+				font-size: $font_size;
+			}
+			
+			@if $font_weight != false {
+				font-weight: $font_weight;
+			}
+			
+			@if $text_trans != false {
+				text-transform: $text_trans;
+			}
+			
+			@if $display {
+				display: $display;
+			} @else {
+				display: block;
+			}
+		}
+	}
+
+}
+
+@mixin ordered_list($ol_mar: null, $ol_pad: null, $li_mar: null, $li_pad: null, $left: null, $top: null, $li_color: null, $font_size: null, $inline: null, $counter_color: null, $counter_weight: null) {
+		
+	ol {
+		@if $ol_mar and $ol_pad {
+			@include margin($ol_mar);
+			@include padding($ol_pad);
+		} @else {
+			@include margin(0);
+			@include padding(0);
+		}
+		
+		li {
+			position: relative;
+			@if $li_mar and $li_pad {
+				@include margin($li_mar);
+				@include padding($li_pad);
+			} @else {
+				@include margin(0);
+				@include padding(0);
+			}
+			list-style-type: none;
+			counter-increment: list;
+			color: $li_color;
+			@if $font_size != false {
+				font-size: $font_size;
+			}
+			@if $inline != false {
+				display: inline-block;
+			} 
+			
+			// Pseudo class
+			&:after {
+				position: absolute;
+				left: $left;
+				@if $top == false {
+					top: auto;
+				} @else {
+					top: $top;
+				}
+				content: counter(list) ".";
+				@if $counter_color == false {
+					color: red;
+				} @else {
+					color: $counter_color;
+				}
+				
+				@if $counter_weight == bold {
+					font-weight: bold;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
+}
+
+@mixin border_radius($val: null) {
+	@if $val {
+		-webkit-border-radius: #{$val}em;
+		-moz-border-radius: #{$val}em;
+		border-radius: #{$val}em;
+	} @else {
+		@extend %full_circle;
+	}
+}
+
+@mixin border ($style, $color: null, $size: null,  $sides...) {
+
+    @if ($style != "") {
+        @if ($sides == "") {
+            border: $style;
+        } @else {
+            @each $side in $sides {
+               @if ($side == 'top' or
+                    $side == 'right' or
+                    $side == 'bottom' or
+                    $side == 'left') {
+
+                    border-#{$side}: $size $style $color;
+                }
+            }
+        }
+    }
+
+}
+
+// Set opacity of the element
+@mixin set_opacity($val){
+  $ie_value: $val*100;
+  opacity: $val;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity="+$val+")";
+  filter: alpha(opacity=$val);
+}
+
+// Set background-cover image 
+@mixin cover_image($file, $type, $x_pos: null, $y_pos: null) {
+	@if $x_pos and $y_pos {
+		background: url('images/' + $file + '.' + $type) no-repeat $x_pos $y_pos;	
+	} @else {
+		background: url('images/' + $file + '.' + $type) no-repeat center top;
+	} 
+	background-size: cover;
+}
+
+// Set background-cover image for retina
+@mixin background-image-retina($file, $type, $width,$x_pos, $y_pos) {
+  background-image: url($file + '.' + $type);
+
+  @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 144dpi) {
+    & {
+      background-image: url($file + '@2x.' + $type);
+      background-size: $width;
+      left: $x_pos;
+      top: $y_pos;
+    }
+  }
+}
+
+// For multiple properties use example @include transform(translateY(-100%) scale(0.5));
+@mixin transform($transform_type) {
+    -webkit-transform: $transform_type;
+	-moz-transform: $transform_type;
+	-o-transform: $transform_type;
+	-ms-transform: $transform_type;
+	transform: $transform_type;
+}
+
+@mixin transition($transitions...) {
+	-webkit-transition: $transitions;
+	-moz-transition: $transitions;
+	-o-transition: $transitions;
+	-ms-transition: $transitions;
+	transition: $transitions;
+}
+
+// Chose between transformations (single transform) to make multiple transformations use transform mixin: @include transform(property(value) property(value) property(value) property(value));
+@mixin transform2D($prop: null, $x: false, $y: false) {
+
+	@if $prop == translate {
+		@if $x == false {
+			@include transform(translateY($y));
+		} @else if $y == false {
+			@include transform(translateX($x));
+		} @else {
+			@include transform(translate($x, $y));
+		}
+	}
+	
+	@if $prop == scale {
+		@if $x == false {
+			@include transform(scaleY($y));
+		} @else {
+			@include transform(scale($x));
+		}
+	}
+	
+	@if $prop == rotate {
+		@include transform(rotate(#{$x}deg));
+	}
+
+	@if $prop == skew {
+		@if $x == false {
+			@include transform(skewY(#{$y}deg));
+		} @else if $y == false {
+			@include transform(skewX(#{$x}deg));
+		} @else {
+			@include transform(skew(#{$x}deg, #{$y}deg));
+		}
+	}	
+}
+
+// @include transition_element($prop: false, $duration: null, $timing_func: null, $delay: null);
+@mixin transition_element($prop: false, $duration: null, $timing_func: null, $delay: null){
+	@if $prop == false {
+		@include transition(all #{$duration}s $timing_func #{$delay}s );
+	} @else {
+		@include transition($prop #{$duration}s $timing_func #{$delay}s );
+	}
+}
+
+@mixin transforming_origin($x_val, $y_val ) {
+	-webkit-transform-origin: $x_val $y_val;
+	-moz-transform-origin: $x_val $y_val;
+	-ms-transform-origin: $x_val $y_val;
+	transform-origin: $x_val $y_val;
+}
+
+
+

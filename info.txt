@@ -1,0 +1,1 @@
+ssh://git@stash.cs.sys:7999/mwb/menu-redesign.git

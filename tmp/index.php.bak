@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <div class="cs_page_container">
+    	<header class="cs_main_menu">
+	  		<nav class="header_top_menu">
+	  			<div class="cs_header_container centered">
+						<div class="menu_inner_section">
+							<div class="search_container">
+								<? require('content/search_bar.php');?>
+							</div>
+							<ul class="sub_menu">
+								<li><a href="/blog">blog</a></li>
+								<li><a href="/live-chat"><span class="icon fa fa-commenting-o"></span>live chat</a></li>
+								<li><a href="/request-info">request info</a></li>
+								<li><a href="/"><span class="fa fa-globe"></span><span class="selected_name">english</span><span class="fa fa-chevron-down"></span></a>
+									<ul class="dropdown">
+										<li><a href="/sites/es/">Español</a></li>
+										<li><a href="/sites/it/">Italiano</a></li>
+										<li><a href="/sites/fr/">Français</a></li>
+										<li><a href="/sites/de/">Deutsch</a></li>
+										<li><a href="/sites/jp/">日本語</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+	  			</div>
+	  		</nav>
+	  		<nav class="header_bottom_menu">
+				<div class="mega_menu">
+					<div class="menu_header">
+						<div class="cs_header_container centered">
+							<div class="header_logo"><a href="/"></a></div>
+							<div id="csMobileMenuBtn" class="mobile_menu_btn"><span></span></div>
+		  					<div class="menu_inner_section">
+								<ul class="featured_links">
+				  					<li><a href="/solutions">solutions<span class="fa fa-chevron-down"></span></a></li>
+				  					<li><a href="/products">products<span class="fa fa-chevron-down"></span></a></li>
+				  					<li><a href="/services">services<span class="fa fa-chevron-down"></span></a></li>
+				  					<li><a href="/company">company<span class="fa fa-chevron-down"></span></a></li>
+				  					<li><a href="/partners">partners<span class="fa fa-chevron-down"></span></a></li>
+				  					<li><a href="/resources">resources<span class="fa fa-chevron-down"></span></a></li>
+				  					<li><a href="/default">15-day free trail</a></li>
+				  				</ul>
+			  				</div>
+			  			</div>
+					</div>
+					<div class="menu_body">
+						<div class="cs_header_container centered">
+							<div data-id="0" class="single_menu_panel">single_menu_panel 0</div>
+							<div data-id="1" class="single_menu_panel">single_menu_panel 1</div>
+							<div data-id="2" class="single_menu_panel">single_menu_panel 2</div>
+							<div data-id="3" class="single_menu_panel">single_menu_panel 3</div>
+							<div data-id="4" class="single_menu_panel">single_menu_panel 4</div>
+							<div data-id="5" class="single_menu_panel">single_menu_panel 5</div>
+							<div data-id="6" class="single_menu_panel">single_menu_panel 6</div>
+						</div>
+					</div>
+				</div>
+	  		</nav>
+	  	</header>
+		<div class="cs_page_content">
+			<div id="_csMobileNavSection_" class="mobile_nav_section">
+    			<div class="mobile_nav_content">
+    				<? require('content/search_bar.php');?>
+					<? require('content/mobile_menu_list.php');?>
+
+    			</div>
+    		</div>
+    		<div class="cs_main_section">
+    			<main>
+	    			<img src="images/page_tmp.png" />
+	    		</main>
+    		</div>
+    	</div>
+    </div>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/cs_menu.js"></script>
+  </body>
+</html>

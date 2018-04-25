@@ -1,0 +1,143 @@
+$mobile_main_links_fs: 0.96em;
+//$mobile_secondary_links_fs: 0.85em;
+
+.mobile_nav_section {
+	position: absolute;
+	left: 100%;
+	top: 0;
+	z-index: 8;
+	height: 100%;
+	width: 100%;
+	background: white;
+	opacity: 0;
+	@include transition(opacity .2s ease-out 0s);
+	//display: none;
+}
+
+.mobile_nav_content {
+	//padding: 1em 1em;
+
+	.search_container {
+		padding: 1em;
+		border-bottom: 1px solid $mobile_list_items_border_bg;
+
+		.icon {
+			font-size: 1.4em;
+		}
+	}
+}
+
+.list_items_content {
+	//margin: 1em 0 0;
+	@include transform(translateX(0));
+	@include transition(all .2s ease-out 0s);
+
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	li {
+		position: relative;
+		border-bottom: 1px solid $mobile_list_items_border_bg;
+		//padding: 1em;
+		
+		color: $mobile_list_items_color;
+		text-transform: uppercase;
+		font-size: $mobile_main_links_fs;
+		font-weight: 900;
+
+		&:hover {
+			//color: $featured_red;
+		}
+
+		&.free_trail a {
+			background: $featured_red;
+    		color: white;
+		}
+
+		&:before {
+			@extend %block_pseudo_container;
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 2;
+			background: $mobile_list_items_color;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+	a {
+		position: relative;
+		z-index: 5;
+		padding: 1em;
+		background: white;
+		display: block;
+	}
+
+	.mobile_nav_block.active {
+		opacity: 1;
+		@include transition(opacity .2s ease-out 0s);
+	}
+
+	&.open {
+		@include transform(translateX(-100%));
+
+		.mobile_nav_block.active {
+			opacity: 0;
+		}
+	}
+}
+
+.mobile_nav_block {
+	position: absolute;
+	left: 100%; //calc(100% + 1em);
+	top: 0;
+	z-index: -1;
+	width: 100%;
+	opacity: 0;
+	@include transition(all .2s ease-out 0s);
+
+	&.active {
+		position: relative;	
+		left: auto;
+		top: auto;
+		z-index: 9;
+		opacity: 1;
+	}
+
+	&.animate_list {
+		opacity: 1;
+		z-index: 9;
+	}
+
+	dl {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	}
+
+	dt {
+		position: relative;
+		padding: 1em 1em 1em 4em;
+		border-bottom: 1px solid $mobile_list_items_border_bg;
+		color: $mobile_list_items_color;
+		font-size: $mobile_main_links_fs;
+		font-weight: 900;
+		text-transform: uppercase;
+		@extend %cp;
+	}
+
+	dd {
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid $mobile_list_items_border_bg;
+		color: $mobile_list_items_color;
+		font-size: 0.9em;
+		@extend %cp;
+	}
+
+}
+
