@@ -297,7 +297,7 @@
 											</div>
 										</div>
 									</div>
-									<div class="mega_menu__view_all"><a href="/resources">view all resources</a></div>
+									<div class="mega_menu__view_all"><a href="/resources">explore all resources</a></div>
 								</div>
 			  				</div>
 	  					</div>
