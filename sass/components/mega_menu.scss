@@ -1,4 +1,8 @@
-$featured_links_margin: 1.3em;
+$featured_links_margin: 1.55em;
+
+.caps {
+	text-transform: uppercase;
+}
 
 .mega_menu {
 	
@@ -144,10 +148,23 @@ $featured_links_margin: 1.3em;
 		dd {
 			margin: 0 0 0.8em;
 			padding: 0;
-			color: $header_logo_hv_color;
+			color: $desktop_menu_dt_color;
 			font-size: 0.78em;
 			font-weight: 900;
+
+			>a {
+				color: $header_logo_hv_color;
+			}
 		}
+
+		.button a {
+			color: $featured_red;
+			//text-transform: uppercase;
+		}
+	}
+
+	&__col__push_1 {
+		margin-left: 33.3%;
 	}
 
 	&__view_all {

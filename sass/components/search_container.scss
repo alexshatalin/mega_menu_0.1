@@ -1,5 +1,5 @@
 .search_btn {
-	padding: 0.8em;
+	padding: 0.7em;
 	color: white;
 	@extend %font_awesome;
 	@extend %cp;
@@ -97,6 +97,23 @@
 		padding: 1em 1em;
 		background: rgba(0,0,0,0.35);
 		color: white;	
+	}
+
+	input::-webkit-input-placeholder {
+	    color: inherit;
+
+	}
+
+	input::-moz-placeholder {
+	    color: inherit;
+	}
+
+	input::-ms-placeholder {
+	    color: inherit;
+	}
+
+	input::placeholder {
+	    color: inherit;
 	}
 
 	&__items {

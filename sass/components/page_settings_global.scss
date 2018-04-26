@@ -15,7 +15,7 @@ $header_height: 2em; //Specify header height if nessesary
 	}
 
 	.cs_page_content {
-		padding-top: 91px; //Temporary height;
+		padding-top: 92px; //Temporary height;
 		z-index: 7;
 		@include transform(translateX(0));
 		@extend %initial_transition;

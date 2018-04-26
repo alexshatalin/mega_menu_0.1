@@ -14,7 +14,7 @@
 						<div data-id="search" class="search_btn fa-search"></div>
 						<ul class="sub_menu">
 							<li><a href="/blog">blog</a></li>
-							<li><a href="/live-chat"><span class="icon fa fa-commenting-o"></span>live chat</a></li>
+							<!-- <li><a href="/live-chat"><span class="icon fa fa-commenting-o"></span>live chat</a></li> -->
 							<li><a href="/request-info">request info</a></li>
 							<li><a href="/"><span class="fa fa-globe"></span><span class="selected_name">english</span><span class="fa fa-chevron-down"></span></a>
 								<ul class="dropdown">
@@ -68,12 +68,18 @@
 													<dd><a href="/solutions/protecting-healthcare-organizations/">Healthcare</a></dd>
 													<dd><a href="/solutions/retail/">Retail</a></dd>
 												</dl>
+
+												<dl>
+													<dt>learn more</dt>
+													<dd><a href="/resources/#filter=.tag-case-study">Industry Case Studies</a></dd>
+												</dl>
 											</div>
 
 											<div class="mega_menu__col">
 												<dl>
-													<dt>learn more</dt>
-													<dd><a href="/resources/#filter=.tag-case-study">Industry Case Studies</a></dd>
+													<dt>join a weekly falcon demo</dt>
+													<dd>Every Tuesday and Thursday</dd>
+													<dd class="button caps"><a href="/product-demo.html">RESERVE SPOT TODAY</a></dd>
 												</dl>
 											</div>
 										</div>
@@ -164,6 +170,14 @@
 													<dd><a href="/experienced-a-breach/">Experienced a Breach?</a></dd>
 												</dl>
 											</div>
+
+											<div class="mega_menu__col">
+												<dl>
+													<dt>experienced a breah?</dt>
+													<dd class="button"><a href="tel:8552769347">Call: 855.276.9347</a></dd>
+													<dd class="button"><a href="mailto:services@crowdstrike.com">Email: services@crowdstrike.com</a></dd>
+												</dl>
+											</div>
 										</div>
 									</div>
 									<div class="mega_menu__view_all"><a href="/services">view all services</a></div>
@@ -197,6 +211,14 @@
 													<dd><a href="https://www.crowdstrike.org" target="_blank">CrowdStrike Foundation</a></dd>
 												</dl>
 											</div>
+
+											<div class="mega_menu__col">
+												<dl>
+													<dt>SECURING THE STATE</dt>
+													<dd class="button">Wyoming's partnership with CrowdStrike</dd>
+													<dd class="button caps"><a href="/resources/videos/securing-the-state-wyomings-partnership-with-crowdstrike/">watch now</a></dd>
+												</dl>
+											</div>
 										</div>
 									</div>
 									<div class="mega_menu__view_all"><a href="/about-us">view all</a></div>
@@ -225,6 +247,14 @@
 													<dd><a href="/gcp-and-crowdstrike/">Google Cloud Platform</a></dd>
 												</dl>
 											</div>
+
+											<div class="mega_menu__col">
+												<dl>
+													<dt>SECURING THE STATE</dt>
+													<dd class="button">Wyoming's partnership with CrowdStrike</dd>
+													<dd class="button caps"><a href="/crowdstrike-uses-unique-platform-technology-to-expand-partner-program/">Launching CrowdStrike Elevate Partner Program</a></dd>
+												</dl>
+											</div>
 										</div>
 									</div>
 									<div class="mega_menu__view_all"><a href="/partners">view all partners</a></div>
@@ -233,11 +263,6 @@
 									<div class="cs_header_container centered">
 										<div class="mega_menu__container">
 											<div class="mega_menu__col">
-												<dl>
-													<dt>explore all resources</dt>
-													<dd><a href="/resources">Resources</a></dd>
-												</dl>
-
 												<dl>
 													<dt>watch</dt>
 													<dd><a href="/resources/#filter=.tag-case-study">Customer Success Stories</a></dd>
@@ -251,7 +276,15 @@
 													<dt>download</dt>
 													<dd><a href="/resources/community-tools">Community Tools</a></dd>
 												</dl>
+												<dl>
+													<dt>events</dt>
+													<dd><a href="/about-us/crowdstrike-events/">CrowdStrike Events</a></dd>
+													<dd><a href="https://go.crowdstrike.com/product-demo.html">Falcon Demos</a></dd>
+												</dl>
+												
+											</div>
 
+											<div class="mega_menu__col">
 												<dl>
 													<dt>read</dt>
 													<dd><a href="http://blog.crowdstrike.com/">CrowdStrike Blog</a></dd>
@@ -260,14 +293,6 @@
 													<dd><a href="/resources/#filter=.tag-report">Reports</a></dd>
 													<dd><a href="/resources/#filter=.tag-data-sheet">Data Sheets</a></dd>
 													<dd><a href="/resources/cyber-attack-news/">Cyber Attack News</a></dd>
-												</dl>
-											</div>
-
-											<div class="mega_menu__col">
-												<dl>
-													<dt>events</dt>
-													<dd><a href="/about-us/crowdstrike-events/">CrowdStrike Events</a></dd>
-													<dd><a href="https://go.crowdstrike.com/product-demo.html">Falcon Demos</a></dd>
 												</dl>
 											</div>
 										</div>

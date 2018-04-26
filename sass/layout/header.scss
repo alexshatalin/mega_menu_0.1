@@ -21,9 +21,8 @@
 		@extend %fix_clear_container;
 	}
 
-	.search_btn,.sub_menu,.sub_menu li,.header_top_menu .title {
-		display: inline-block;
-		vertical-align: middle;
+	.search_btn,.sub_menu,.sub_menu li {
+		float: left;
 	}
 
 	.secondary_icon {
@@ -92,12 +91,14 @@
 		background: $header_top_menu_bg;
 	}
 
-	.fa-globe,.fa-chevron-down,.selected_name {
-		vertical-align: middle;
-	}
+	// .fa-globe,.fa-chevron-down,.selected_name {
+	// 	vertical-align: middle;
+	// }
 
 	.fa-globe {
 		font-size: 1.4em;
+		line-height: 0.6;
+		vertical-align: middle;
 	}
 
 	.fa-chevron-down {
@@ -116,9 +117,9 @@ ul.sub_menu li {
 		z-index: 9;
 		background: $header_top_menu_bg;	
 		display: block;
-		padding: 0.1em 1.3em;
+		padding: 0.9em 1.3em;
 		border-left: 2px solid $header_top_menu_li_border;
-		line-height: 3.2;
+		//line-height: 3.2;
 
 		&:hover {
 			background: $header_top_dropdown_li_hover_bg;

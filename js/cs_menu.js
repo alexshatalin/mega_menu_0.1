@@ -16,6 +16,7 @@
 		$('body').on('click', '[data-id="search"]', function(){
 			if( false == csMenuObj.searchModalOpened ) {
 				$('.search_modal').addClass('opened');
+				$('.cs_search').focus();
 				csMenuObj.pageContainer.addClass('blur').removeAttr('style');
 				csMenuObj.resetMobileMenu();
 				$('.mobile_menu_btn').addClass('reset_opacity');
@@ -23,8 +24,6 @@
 			} else {
 				csMenuObj.closeSearchResults();
 			}
-			
-
 		}).on('click', '#csMobileMenuBtn', function(){
 			if( false == csMenuObj.menuOpen ) {
 				$(window).scrollTop(0);
@@ -46,6 +45,10 @@
 
 		}).on('click', '.mobile_nav_block dt', function(){
 			csMenuObj.closeMobMenu();
+		}).on('keydown', function(e){
+			if( e.which == 27 && true == csMenuObj.searchModalOpened ) {
+				$('[data-id="search"]').click();
+			}
 		});
 
 		// Desktop code starts here
