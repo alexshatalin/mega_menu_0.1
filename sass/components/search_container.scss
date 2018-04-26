@@ -23,7 +23,7 @@
 
 	&__section {
 		padding: 9em 0 0;
-		margin: 7em auto 0;
+		margin: 1.6em auto 0;
 	}
 
 	&__close {
@@ -42,7 +42,7 @@
 			@extend %block_pseudo_container;
 			background: $featured_red;
 			position: absolute;
-
+			@include transform(scale(1));
 		}
 
 		&:before {
@@ -58,10 +58,37 @@
 			height: 1px;
 			width: 80%;
 		}
+
+		span {
+			position: absolute;
+			left: 14%;
+			top: 14%;
+			@include transform(rotate(49deg));
+			@include transition(opacity 0.2s ease-out 0s);
+			opacity: 0;
+			font-family: "crowdstrike";
+			@extend .cs-icon-cs-icon;
+			color: $featured_red;
+			font-size: 2.4em;
+		}
+
+		&:hover {
+			&:before,&:after {
+				@include transform(scale(0));
+				@include transition(all 0.2s ease-out 0s);
+			}
+
+			span {
+				opacity: 1;
+			}
+		}
 	}
 
 	&__content {
 		margin: 4em 0 0;
+		height: 50em;
+		overflow: scroll;
+		opacity: 0;
 	}
 
 	input {
@@ -151,6 +178,17 @@ and (max-width: 1024px) {
 		padding: 1.3em;
 		border: 0;
 		background: none;
+		
+		&:hover {
+			&:before,&:after {
+				@include transform(scale(1));
+				@include transition(none);
+			}
+		}
+
+		span {
+			display: none;
+		}
 	}
 
 	&__single_item {

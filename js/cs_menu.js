@@ -2,7 +2,6 @@
 	'use strict';
 	var csMenuObj = {};
 	csMenuObj.desktopMenuState;
-	csMenuObj.searchModalState;
 
 	$(document).ready(function(){	
 		csMenuObj.btnId = null;
@@ -68,7 +67,6 @@
 		}).on('mouseleave', '.mega_menu__content', function(){
 			csMenuObj.closeDesktopMenu();
 		});
-
 	});
 
 	$(window).on('resize', function(){
@@ -78,12 +76,31 @@
 		}
 
 		// Need to rework search removal
-		// if( true == csMenuObj.searchModalOpened && csMenuObj.searchModalState != 1 ) {
-		// 	csMenuObj.closeSearchResults();
-		// 	//csMenuObj.searchModalState = 1;
-		// }
+		if( true == csMenuObj.searchModalOpened && $(window).width() != csMenuObj.windowWidth ) {
+			csMenuObj.windowWidth = $(window).width();
+			csMenuObj.closeSearchResults();
+		}
 		
 	});
+
+	//Temp search scroll
+	// 	 var eTop = $(".search_modal__section").offset().top;
+	// 	 var eHeight = $(".search_modal__content").height();
+	// 	 var eBottom = eTop + eHeight - $(window).height();
+	// 	 //console.log(eTop);
+	// $(window).on('scroll', function(){
+	// 	var windowScrollTop = $(window).scrollTop();
+ //        if(windowScrollTop < eTop){
+ //            console.log("not allowed");
+ //            $(document).scrollTop(eTop);
+ //        }
+ //        else if(windowScrollTop > eBottom){
+ //            $(document).scrollTop(eBottom);
+ //        }
+ //        else{
+ //            console.log("allowed");
+ //        }
+	// });
 
 	csMenuObj.closeSearchResults = function(){
 		$('.search_modal').removeClass('opened');

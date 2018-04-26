@@ -7,7 +7,7 @@ $featured_links_margin: 1.3em;
 		left: 0;
 		top: 100%;
 		z-index: 8;
-		padding: 11.8em 0;
+		padding: 12.8em 0;
 		background: $header_bottom_color;
 		width: 100%;
 		overflow: hidden;
@@ -126,7 +126,7 @@ $featured_links_margin: 1.3em;
 		float: left;
 
 		dl {
-			margin: 0;
+			margin: 0 0 1.7em;
 			padding: 0;
 			list-style-type: none;
 			display: block;
@@ -142,7 +142,7 @@ $featured_links_margin: 1.3em;
 		}
 
 		dd {
-			margin: 0 0 1em;
+			margin: 0 0 0.8em;
 			padding: 0;
 			color: $header_logo_hv_color;
 			font-size: 0.78em;

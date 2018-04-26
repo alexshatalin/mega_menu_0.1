@@ -51,7 +51,6 @@
 											<div class="mega_menu__col">
 												<dl>
 													<dt>solutions</dt>
-													<dd><a href="/solutions">CrowdStrike Solutions</a></dd>
 													<dd><a href="/solutions/endpoint-protection-solutions">Endpoint Protection</a></dd>
 													<dd><a href="/solutions/threat-intelligence-solutions">Threat Intelligence</a></dd>
 													<dd><a href="/solutions/antivirus-solutions">Next-Gen Antivirus</a></dd>
@@ -65,9 +64,9 @@
 												<dl>
 													<dt>industries</dt>
 													<dd><a href="/solutions/financial-services/">Finance</a></dd>
-													<dd><a href="/solutions/protecting-healthcare-organizations/">Healthcare</a></dd>
 													<dd><a href="/solutions/public-sector/">Public Sector</a></dd>
-													<dd><a href="/solutions/retail">Retail</a></dd>
+													<dd><a href="/solutions/protecting-healthcare-organizations/">Healthcare</a></dd>
+													<dd><a href="/solutions/retail/">Retail</a></dd>
 												</dl>
 											</div>
 
@@ -93,7 +92,19 @@
 													<dd><a href="/products/falcon-insight/">Falcon Insight</a></dd>
 													<dd><a href="/products/falcon-endpoint-protection-complete/">Falcon Endpoint Protection Complete</a></dd>
 												</dl>
+												
+												<dl>
+													<dt>additional products</dt>
+													<dd><a href="/products/data-center/">Falcon for Data Centers</a></dd>
+													<dd><a href="/products/crowdstrike-support/">CrowdStrike Support</a></dd>
+													<dd><a href="/products/crowdstrike-university/">CrowdStrike University</a></dd>
+													<dd><a href="/products/falcon-dns/">Falcon DNS</a></dd>
+												</dl>
+												
 
+											</div>
+
+											<div class="mega_menu__col">
 												<dl>
 													<dt>security operations</dt>
 													<dd><a href="/products/falcon-overwatch/">Falcon OverWatch</a></dd>
@@ -101,6 +112,14 @@
 													<dd><a href="/products/falcon-discover/">Falcon Discover</a></dd>
 												</dl>
 
+												<dl>
+													<dt>platform</dt>
+													<dd><a href="/products/architecture/">Architecture</a></dt>
+													<dd><a href="/products/threat-graph/">CrowdStrike Threat Graph</a></dd>
+													<dd><a href="/resources/#filter=.tag-case-study">Industry Case Studies</a></dd>
+												</dl>
+
+												
 											</div>
 
 											<div class="mega_menu__col">
@@ -111,27 +130,15 @@
 													<dd><a href="/products/falcon-sandbox/">Falcon Sandbox</a></dd>
 													<dd><a href="/products/falcon-intelligence/">Falcon Threat Intelligence</a></dd>
 												</dl>
-
-												<dl>
-													<dt>additional products</dt>
-													<dd><a href="/products/data-center/">Falcon for Data Centers</a></dd>
-													<dd><a href="/products/crowdstrike-support/">CrowdStrike Support</a></dd>
-													<dd><a href="/products/crowdstrike-university/">CrowdStrike University</a></dd>
-													<dd><a href="/products/falcon-dns/">Falcon DNS</a></dd>
-												</dl>
-											</div>
-
-											<div class="mega_menu__col">
+												
 												<dl>
 													<dt>learn more</dt>
-													<dd><a href="/resources/#filter=.tag-case-study">Industry Case Studies</a></dd>
-													<dd><a href="/products/architecture/">Platform Architecture</a></dt>
-													<dd><a href="/products/threat-graph/">CrowdStrike Threat Graph</a></dd>
 													<dd><a href="/products/crowdstrike-falcon-faq/">CrowdStrike Falcon FAQ</a></dd>
 													<dd><a href="/products/compliance/">Compliance &amp; Certification</a></dd>
 													<dd><a href="/products/third-party-testing-evaluations-results/">Third-Party Testing</a></dd>
 													<dd><a href="/products/falcon-connect/">Technology Partners</a></dd>
 												</dl>
+												
 											</div>
 										</div>
 									</div>
