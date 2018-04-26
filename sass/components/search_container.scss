@@ -88,7 +88,8 @@
 		margin: 4em 0 0;
 		height: 50em;
 		overflow: scroll;
-		opacity: 0;
+		opacity: 0; //Temporarty set 
+		display: none; //Temporarty set 
 	}
 
 	input {

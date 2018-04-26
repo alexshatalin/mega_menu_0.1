@@ -27,7 +27,7 @@
 		}).on('click', '#csMobileMenuBtn', function(){
 			if( false == csMenuObj.menuOpen ) {
 				$(window).scrollTop(0);
-				csMenuObj.pageContainer.addClass('open');//.css({'height': csMenuObj.mobileMainMenuHeight});
+				csMenuObj.pageContainer.addClass('open').css({'height': csMenuObj.mobileMainMenuHeight});
 				csMenuObj.menuOpen = true;
 			} else {
 				csMenuObj.resetMobileMenu();
