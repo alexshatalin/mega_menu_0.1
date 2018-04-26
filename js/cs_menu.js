@@ -48,14 +48,10 @@
 		}).on('keydown', function(e){
 			if( e.which == 27 && true == csMenuObj.searchModalOpened ) {
 				$('[data-id="search"]').click();
+				$('.cs_search').val('');
 			}
-		});
-
-		// Desktop code starts here
-		$('body').on('mouseenter', '.mega_menu__links a', function(){
-			
+		}).on('mouseenter', '.mega_menu__links a', function(){
 			csMenuObj.currentElem = $(this).attr('data-id');
-
 			if( csMenuObj.currentElem != undefined && csMenuObj.desktopMenuState != 1 ) {
 				$('.mega_menu').addClass('__opened');
 				csMenuObj.desktopMenuState = 1;	
