@@ -30,7 +30,7 @@
 	  			</div>
 	  		</nav>
 	  		<nav class="header_bottom_menu">
-				<div class="mega_menu __opened">
+				<div class="mega_menu">
 					<div class="cs_header_container centered mega_menu__header">
 						<div class="header_logo"><a href="/"></a></div>
 						<div id="csMobileMenuBtn" class="mobile_menu_btn"><span></span></div>
@@ -45,7 +45,7 @@
 			  					<li><a href="/default">15-day free trail</a></li>
 			  				</ul>
 			  				<div class="mega_menu__body">
-								<div data-id="solutions" class="mega_menu__panel active">
+								<div data-id="solutions" class="mega_menu__panel">
 									<div class="cs_header_container centered">
 										<div class="mega_menu__container">
 											<div class="mega_menu__col">
