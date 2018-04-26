@@ -1,9 +1,5 @@
 $featured_links_margin: 1.55em;
 
-.caps {
-	text-transform: uppercase;
-}
-
 .mega_menu {
 	
 	&__body {
@@ -142,6 +138,7 @@ $featured_links_margin: 1.55em;
 			border-bottom: 1px solid $desktop_menu_dt_border;
 			color: $desktop_menu_dt_color;
 			font-size: 0.9em;
+			font-weight: 900;
 			text-transform: uppercase;
 		}
 
@@ -155,11 +152,6 @@ $featured_links_margin: 1.55em;
 			>a {
 				color: $header_logo_hv_color;
 			}
-		}
-
-		.button a {
-			color: $featured_red;
-			//text-transform: uppercase;
 		}
 	}
 
@@ -182,6 +174,62 @@ $featured_links_margin: 1.55em;
 			font-size: 1em;
 			font-weight: 900;
 			text-transform: uppercase;
+		}
+	}
+
+	.last__content {
+		height: 21.1em;
+		text-align: center;
+		
+		dl {
+			position: absolute;
+			left: 10%;
+			top: calc(50% - 1.4em);
+			@include transform(translateY(-50%));
+			margin: 0;
+			width: 80%;
+		}
+
+		dd,dt {
+			color: $header_logo_hv_color;
+		}
+
+		dt {
+			margin: 0;
+			border: 0;
+			font-size: 1.14em;
+		}
+
+		dd {
+			line-height: 1.5;
+			font-size: 0.8em;
+			text-align: center;
+		}
+
+		.text {
+			margin: 0 auto;
+			width: 67%;
+		}
+
+		.links a {
+			color: $featured_red;
+		}
+
+		.button a {
+			display: block;
+			margin: 1em auto;
+			padding: 0.8em 0;
+			border: 2px solid $featured_red;
+			border-radius: 2.5em;
+			color: $featured_red;
+			text-transform: uppercase;
+			@include transition(all .2s ease-out 0s);
+
+			&:hover {
+				border: 2px solid white;
+				background: $featured_red; 
+				color: white;
+			}
 		}
 	}
 

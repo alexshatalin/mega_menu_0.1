@@ -30,7 +30,7 @@
 	  			</div>
 	  		</nav>
 	  		<nav class="header_bottom_menu">
-				<div class="mega_menu">
+				<div class="mega_menu __opened">
 					<div class="cs_header_container centered mega_menu__header">
 						<div class="header_logo"><a href="/"></a></div>
 						<div id="csMobileMenuBtn" class="mobile_menu_btn"><span></span></div>
@@ -45,7 +45,7 @@
 			  					<li><a href="/default">15-day free trail</a></li>
 			  				</ul>
 			  				<div class="mega_menu__body">
-								<div data-id="solutions" class="mega_menu__panel">
+								<div data-id="solutions" class="mega_menu__panel active">
 									<div class="cs_header_container centered">
 										<div class="mega_menu__container">
 											<div class="mega_menu__col">
@@ -76,11 +76,13 @@
 											</div>
 
 											<div class="mega_menu__col">
-												<dl>
-													<dt>join a weekly falcon demo</dt>
-													<dd>Every Tuesday and Thursday</dd>
-													<dd class="button caps"><a href="/product-demo.html">RESERVE SPOT TODAY</a></dd>
-												</dl>
+												<div class="last__content">
+													<dl>
+														<dt>join demo</dt>
+														<dd class="text">Join a weekly Falcon demo every Tuesday and Thursday</dd>
+														<dd class="button"><a href="/product-demo.html">RESERVE SPOT TODAY</a></dd>
+													</dl>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -172,11 +174,13 @@
 											</div>
 
 											<div class="mega_menu__col">
-												<dl>
-													<dt>experienced a breah?</dt>
-													<dd class="button"><a href="tel:8552769347">Call: 855.276.9347</a></dd>
-													<dd class="button"><a href="mailto:services@crowdstrike.com">Email: services@crowdstrike.com</a></dd>
-												</dl>
+												<div class="last__content">
+													<dl>
+														<dt>experienced a breah?</dt>
+														<dd class="links"><a href="tel:8552769347">Call: 855.276.9347</a></dd>
+														<dd class="links"><a href="mailto:services@crowdstrike.com">Email: services@crowdstrike.com</a></dd>
+													</dl>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -213,11 +217,13 @@
 											</div>
 
 											<div class="mega_menu__col">
-												<dl>
-													<dt>SECURING THE STATE</dt>
-													<dd class="button">Wyoming's partnership with CrowdStrike</dd>
-													<dd class="button caps"><a href="/resources/videos/securing-the-state-wyomings-partnership-with-crowdstrike/">watch now</a></dd>
-												</dl>
+												<div class="last__content">
+													<dl>
+														<dt>SECURING THE STATE</dt>
+														<dd class="text">Wyoming's partnership with CrowdStrike</dd>
+														<dd class="button"><a href="/resources/videos/securing-the-state-wyomings-partnership-with-crowdstrike/">learn more</a></dd>
+													</dl>
+												</div>
 											</div>
 										</div>
 									</div>
@@ -249,11 +255,13 @@
 											</div>
 
 											<div class="mega_menu__col">
-												<dl>
-													<dt>SECURING THE STATE</dt>
-													<dd class="button">Wyoming's partnership with CrowdStrike</dd>
-													<dd class="button caps"><a href="/crowdstrike-uses-unique-platform-technology-to-expand-partner-program/">Launching CrowdStrike Elevate Partner Program</a></dd>
-												</dl>
+												<div class="last__content">
+													<dl>
+														<dt>news</dt>
+														<dd class="text">Launching CrowdStrike Elevate Partner Program</dd>
+														<dd class="button"><a href="/resources/videos/securing-the-state-wyomings-partnership-with-crowdstrike/">read press release</a></dd>
+													</dl>
+												</div>
 											</div>
 										</div>
 									</div>

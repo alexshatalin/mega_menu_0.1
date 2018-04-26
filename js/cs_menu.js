@@ -78,7 +78,6 @@
 			csMenuObj.resetMobileMenu();
 		}
 
-		// Need to rework search removal
 		if( true == csMenuObj.searchModalOpened && $(window).width() != csMenuObj.windowWidth ) {
 			csMenuObj.windowWidth = $(window).width();
 			csMenuObj.closeSearchResults();
