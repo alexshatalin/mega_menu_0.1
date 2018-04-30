@@ -152,6 +152,10 @@ $featured_links_margin: 1.55em;
 			>a {
 				color: $header_logo_hv_color;
 			}
+
+			>a:hover {
+				color: $featured_red;
+			}
 		}
 	}
 
@@ -177,14 +181,16 @@ $featured_links_margin: 1.55em;
 		}
 	}
 
-	.last__content {
-		height: 21.1em;
+	&__col.last .col__content {
+		border: 1px solid $featured_red;
+		border-radius: 0.3em;
+		height: 19.5em;
 		text-align: center;
 		
 		dl {
 			position: absolute;
 			left: 10%;
-			top: calc(50% - 1.4em);
+			top: 50%;
 			@include transform(translateY(-50%));
 			margin: 0;
 			width: 80%;
